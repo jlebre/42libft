@@ -23,7 +23,7 @@ int		ft_isprint(int i);
 size_t	ft_strlen(const char *str);
 int		ft_toupper(int i);
 int		ft_tolower(int i);
-char	ft_strlcpy(char *dst, char *src, int size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	ft_bzero(char *s, int n);
 void	*ft_calloc(size_t nitems, size_t size);
 void	*ft_memchr(const void *str, int c, size_t n);
