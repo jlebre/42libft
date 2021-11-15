@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:01:14 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 15:03:26 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/15 16:30:52 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
-	int	val1;
-	int	val2;
+	size_t	i;
+	int		val1;
+	int		val2;
 
 	i = 0;
 	val1 = 0;

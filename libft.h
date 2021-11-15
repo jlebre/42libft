@@ -6,19 +6,21 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:10:04 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 15:09:41 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/15 18:11:46 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdlib.h>
+# include <unistd.h> 
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
 int		ft_isalnum(int i);
 int		ft_isascii(int i);
 int		ft_isprint(int i);
-int		ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 int		ft_toupper(int i);
 int		ft_tolower(int i);
 char	ft_strlcpy(char *dst, char *src, int size);

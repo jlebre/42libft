@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:19:47 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 14:22:04 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/15 16:33:17 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,10 @@ void	ft_bzero(char *s, int n)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (i < n)
 	{
-		*(unsigned char *)(str + i) = 0;
+		*(unsigned char *)(s + i) = 0;
 		i++;
 	}
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:22:31 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 14:24:39 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/15 16:51:31 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*ptr;
-	int		i;
+	size_t	i;
 
 	ptr = (void *)malloc(nitems * size);
 	if (!ptr)
