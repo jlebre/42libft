@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:41:40 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 19:31:10 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/16 17:37:29 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (src[i] && (i < (size - 1)))
+	if (size > 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while ((src[i] != '\0') && (i < (size - 1)))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (i);
+	return (ft_strlen(src));
 }
