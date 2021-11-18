@@ -5,37 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 15:08:04 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 17:17:14 by jlebre           ###   ########.fr       */
+/*   Created: 2021/11/18 15:56:41 by jlebre            #+#    #+#             */
+/*   Updated: 2021/11/18 18:38:26 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	size_t	j;
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{	
 	char	*str;
+	size_t	i;
 
-	i = 0;
-	j = 0;
-	str = (malloc(sizeof(char) * len + 1));
+	if (!s)
+		return (NULL);
+	if (!len || ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start > len)
+		str = (char *)malloc(sizeof(char) * (len + 1));
+	else
+		str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
-	while (s[i] != '\0')
+	i = 0;
+	while (i < len && s[start + i])
 	{
-		if (i >= start)
-		{
-			while (((i - start) < len) && (i != '\0'))
-			{
-				str[j] = s[i];
-				i++;
-				j++;
-			}
-			return ((char *)str);
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }

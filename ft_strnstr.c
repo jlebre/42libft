@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:03:40 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 15:06:22 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/18 17:46:27 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	i;
 	size_t	j;
 
-	if ((!s1) || (!s2))
-		return (NULL);
-	if ((!s2) || (!s2[0]))
+	if (!s2[0])
 		return ((char *)s1);
 	i = 0;
 	while ((s1[i]) && (i < n))

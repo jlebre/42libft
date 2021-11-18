@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:22:31 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/15 16:51:31 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/18 15:32:54 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,10 @@
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*ptr;
-	size_t	i;
 
-	ptr = (void *)malloc(nitems * size);
+	ptr = malloc(nitems * size);
 	if (!ptr)
 		return (NULL);
-	i = 0;
-	while (i < size)
-	{
-		*(unsigned char *)(ptr + i) = 0;
-		i++;
-	}
+	ft_memset(ptr, '\0', nitems * size);
 	return (ptr);
 }

@@ -6,11 +6,25 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:34:00 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/16 17:03:12 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/11/18 19:18:47 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"	
+
+static int	check_set(const char *s, char k)
+{
+	int	a;
+
+	a = 0;
+	while (s[a])
+	{
+		if (s[a] == k)
+			return (k);
+		a++;
+	}
+	return (!k);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -19,13 +33,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		k;
 
+	if (!set)
+		return ((char *)s1);
 	i = 0;
 	j = ft_strlen(s1);
-	while (s1[i] == (char)set)
+	while (s1[i] == check_set(set, s1[i]))
 		i++;
-	while (s1[j] == (char)set)
+	while (s1[j] == check_set(set, s1[j]))
 		j--;
-	str = malloc(sizeof(char) * (j - i + 1));
+	str = (char *)malloc(sizeof(char) * (j - i));
 	if (!str)
 		return (NULL);
 	k = 0;

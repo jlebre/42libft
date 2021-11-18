@@ -5,20 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 17:03:45 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/16 17:09:00 by jlebre           ###   ########.fr       */
+/*   Created: 2021/11/18 15:42:08 by jlebre            #+#    #+#             */
+/*   Updated: 2021/11/18 17:47:31 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
 	char	*new_str;
 	size_t	i;
 
-	if (!str)
-		return (NULL);
 	new_str = (malloc(sizeof(char) * (ft_strlen(str) + 1)));
 	if (!new_str)
 		return (NULL);
