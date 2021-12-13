@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 19:00:35 by jlebre            #+#    #+#             */
-/*   Updated: 2021/12/07 19:02:01 by jlebre           ###   ########.fr       */
+/*   Created: 2021/12/13 14:08:54 by jlebre            #+#    #+#             */
+/*   Updated: 2021/12/13 14:09:19 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,17 @@ int	ft_atoi(const char *str)
 	while ((str[i] == '\n') || (str[i] == '\r') || (str[i] == '\t')
 		|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == ' '))
 		i++;
-	if ((str[i] == '+') || (str[i] == '-'))
+	while ((str[i] == '-') || (str[i] == '+'))
 	{
 		if (str[i] == '-')
-			sinal = -1;
+			sinal *= -1;
 		i++;
 	}
-	if ((str[i] >= 48) && (str[i] <= 57))
+	while ((str[i] >= 48) && (str[i] <= 57))
 	{	
-		val = (str[i] - '0');
+		val *= 10;
+		val += str[i] - 48;
 		i++;
-		while ((str[i] >= 48) && (str[i] <= 57))
-		{
-			val = ((val * 10) + (str[i] - '0'));
-			i++;
-		}
 	}
 	return (sinal * val);
 }
