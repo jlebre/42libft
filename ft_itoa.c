@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:00:37 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/24 15:01:46 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/12/13 13:09:42 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ static int	count(int a)
 char	*ft_itoa(int n)
 {
 	char	*arr;
-	int	size;
+	int		size;
 
 	if (n == -2147483648)
-        return (ft_strdup("-2147483648"));
-    if (n == 0)
-        return (ft_strdup("0"));
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	size = count(n);
 	arr = (char *)malloc(sizeof(char) * (size + 1));
 	if (!arr)
@@ -56,5 +56,5 @@ char	*ft_itoa(int n)
 		n /= 10;
 		size--;
 	}
-	return (arr);	
+	return (arr);
 }

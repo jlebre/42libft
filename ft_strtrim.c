@@ -6,7 +6,7 @@
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:34:00 by jlebre            #+#    #+#             */
-/*   Updated: 2021/11/18 19:18:47 by jlebre           ###   ########.fr       */
+/*   Updated: 2021/12/13 13:32:18 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
+	char		*str;
 	size_t		i;
 	size_t		j;
 
