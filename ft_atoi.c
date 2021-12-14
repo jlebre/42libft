@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 	while ((str[i] == '\n') || (str[i] == '\r') || (str[i] == '\t')
 		|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == ' '))
 		i++;
-	while ((str[i] == '-') || (str[i] == '+'))
+	if ((str[i] == '-') || (str[i] == '+'))
 	{
 		if (str[i] == '-')
 			sinal *= -1;

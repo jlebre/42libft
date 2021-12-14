@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 14:38:16 by jlebre            #+#    #+#             */
-/*   Updated: 2021/12/13 13:29:57 by jlebre           ###   ########.fr       */
+/*   Created: 2021/12/13 14:13:11 by jlebre            #+#    #+#             */
+/*   Updated: 2021/12/13 14:13:30 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s1[j])
 	{
-		str[i] = s1[j];
-		i++;
-		j++;
+		str[i++] = s1[j++];
 	}
 	j = 0;
 	while (s2[j])
 	{
-		str[i] = s2[j];
-		i++;
-		j++;
+		str[i++] = s2[j++];
 	}
 	str[i] = '\0';
 	return (str);
