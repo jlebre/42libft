@@ -21,8 +21,7 @@ static int	count(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if ((s[i] != c && s[i] != '\0')
-			&& (s[i + 1] == c || s[i + 1] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			words++;
 		i++;
 	}
