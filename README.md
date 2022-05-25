@@ -75,3 +75,7 @@ Passed the Moulinette and all the following testers:
 #
 
 ![Screenshot 2022-05-25 002835](https://user-images.githubusercontent.com/94384240/170148099-cae105d8-9eab-465e-8a4f-5e01825d5e73.png)
+
+#
+
+To use the code as it is, you need to move all the files inside /src to the same folder as the Makefile and the libft.h
