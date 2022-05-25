@@ -66,7 +66,7 @@ To see the Makefile [click here](https://github.com/jlebre/libft/blob/main/Makef
 
 #
 
-Passed the Moulinette and all the following tester:
+Passed the Moulinette and all the following testers:
 
 [libftTester](https://github.com/Tripouille/libftTester) //
 [libft-war-machine](https://github.com/y3ll0w42/libft-war-machine) //
