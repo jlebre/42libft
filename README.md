@@ -78,4 +78,4 @@ Passed the Moulinette and all the following testers:
 
 #
 
-To use the code as it is, you need to move all the files inside /src to the same folder as the Makefile and the libft.h
+To use the code as it is, you need to move all the files inside /src to the same folder as the Makefile and the libft.h!
