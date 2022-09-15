@@ -2,7 +2,7 @@
 ![school_42](https://user-images.githubusercontent.com/94384240/170144677-24ff4d41-6e4a-491a-adfa-7dcf0eac630a.jpeg)
 42 Cursus Libft
 
-This was the first project that i've done at 42 Lisbon. The goal was to understand how to create your own library, creating also the functions within!
+This is the first project that i've done at 42 Lisbon. The goal was to understand how to create your own library, creating also the functions within!
 
 To see the subject [click here](https://github.com/jlebre/libft/blob/main/libft.pdf) !
 
